@@ -8,11 +8,10 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
 	cors: {
-		origin: [
-			"http://localhost:3000", 
-			"https://your-frontend-production.up.railway.app" // ✅ Allow frontend URL in production
-		  ],
-		methods: ["GET", "POST"],
+		 origin: ["https://frontend-production-9386.up.railway.app"],
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        allowedHeaders: ['Content-Type', 'Authorization'],
+        credentials: true
 	},
 });
 
