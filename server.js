@@ -27,8 +27,9 @@ cloudinary.config({
 });
 app.use(cors(
     {
-        origin: ["https://deploy-mern-frontend.vercel.app"],
-        methods: ["POST", "GET"],
+       origin: ["https://frontend-production-9386.up.railway.app"],
+        methods: ['GET', 'POST', 'PUT', 'DELETE'],
+        allowedHeaders: ['Content-Type', 'Authorization'],
         credentials: true
     }
 ));
